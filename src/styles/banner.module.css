@@ -1,19 +1,13 @@
 .banner {
-  min-height: calc(100vh - 3.1875rem);
+  min-height: calc(90vh - 3.1875rem);
 }
 .bannerCont {
   margin: auto;
-  padding-bottom: 4.1875rem;
   display: flex;
   justify-content: center;
   max-width: 1386px;
 }
 
-@media (max-height: 530px) {
-  .bannerCont {
-    padding-bottom: 1rem;
-  }
-}
 .bannerContLeft {
   padding-right: 0.4rem;
   width: 100%;
@@ -240,7 +234,7 @@
 @media (orientation: portrait) {
   .banner {
     min-width: auto;
-    min-height: 100vh;
+    min-height: 90vh;
   }
   .bannerCont {
     max-width: 100%;
