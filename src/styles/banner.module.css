@@ -26,10 +26,12 @@
   font-weight: 600;
   color: white;
   padding: 0.05em 0;
+  font-family: inherit;
 }
 .bannerContLeft > h2 {
   font-size: 1.87rem;
   font-weight: 400;
+  font-family: inherit;
 }
 .brH2 {
   display: none;
@@ -38,6 +40,7 @@
   font-size: 1.2rem;
   font-weight: 400;
   opacity: 0.8;
+  font-family: inherit;
 }
 .skills {
   letter-spacing: 0.16rem;
