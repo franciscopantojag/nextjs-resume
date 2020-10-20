@@ -74,18 +74,17 @@
   border-radius: 0.2em;
   padding: 0 0.5em;
 }
+.but:hover {
+  background-color: var(--dark-black);
+  color: var(--red);
+  border: 1px solid var(--red);
+}
 .but:active {
   background-color: var(--dark-black);
   color: var(--red);
   border: 1px solid var(--red);
 }
-@media (hover: hover) {
-  .but:hover {
-    background-color: var(--dark-black);
-    color: var(--red);
-    border: 1px solid var(--red);
-  }
-}
+
 .svgBut {
   padding: 0;
   display: flex;
