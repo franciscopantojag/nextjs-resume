@@ -237,11 +237,9 @@
 }
 @media (orientation: portrait) {
   .banner {
-    min-width: auto;
-    min-height: 85vh;
+    min-height: 87vh;
   }
   .bannerCont {
-    max-width: 100%;
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column-reverse;
@@ -257,7 +255,6 @@
     text-align: center;
   }
   .bannerContRight {
-    max-width: 100%;
     align-self: center;
     width: auto;
     width: 15rem;
@@ -265,7 +262,6 @@
   .buttons {
     align-self: center;
     font-size: 1rem;
-    /* margin-top: 1em; */
   }
   .bannerContLeft > h1 {
     font-size: 3.5rem;
