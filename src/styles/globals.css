@@ -15,6 +15,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-tap-highlight-color: #ccc;
 }
 
 html,
