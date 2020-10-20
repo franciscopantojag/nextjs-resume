@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Head from "next/head";
-
+import initReactFastclick from "react-fastclick";
+// initReactFastclick();
 function MyApp({ Component, pageProps }) {
   return (
     <>

@@ -1,8 +1,7 @@
 import Head from "next/head";
 import NavBar from "../components/navBar";
 import Banner from "../components/banner";
-import initReactFastclick from "react-fastclick";
-initReactFastclick();
+
 export default function Home() {
   return (
     <>
