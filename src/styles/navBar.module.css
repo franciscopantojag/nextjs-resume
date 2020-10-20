@@ -1,0 +1,67 @@
+.navBar {
+  width: 100%;
+  background-color: var(--light-gray);
+  display: flex;
+  min-width: 468px;
+  -webkit-box-shadow: 0px 0px 5px 0px var(--border);
+  -moz-box-shadow: 0px 0px 5px 0px var(--border);
+  box-shadow: 0px 0px 5px 0px var(--border);
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  min-width: 593px;
+}
+@media (orientation: landscape) {
+  .navBar {
+    min-width: 593px;
+  }
+}
+.navBar > div {
+  width: calc(100% - 2rem);
+  max-width: 1386px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+.navBar > div > ul {
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+}
+.navBar > div > ul > li {
+  list-style: none;
+  margin-right: 2rem;
+  display: flex;
+}
+.navBar > div > ul > li:last-child {
+  margin-right: 0;
+}
+.navBar > div > ul > li > a {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.navBarRes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.navBarRes > ul > li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 0.3em;
+}
+.navBarRes > ul > li > a {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media (orientation: portrait) {
+  .navBar {
+    display: none;
+    min-width: 500px;
+  }
+}
