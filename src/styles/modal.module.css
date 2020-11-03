@@ -147,7 +147,7 @@
   position: absolute;
   font-size: 1.4rem;
   color: var(--red);
-  left: calc(100% + 2em);
+  left: calc(100% + 1em);
   top: 0;
 }
 

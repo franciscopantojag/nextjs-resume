@@ -1,4 +1,14 @@
+import { useContext } from "react";
+import { Contexto } from "../appContext";
+
 export default function AboutMe() {
+  const { setIsOpen } = useContext(Contexto);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  const email = "franciscopantojag98@gmail.com";
   return (
     <section className="container">
       <div className="containerCont sectionCont sectionContAbout">
@@ -24,12 +34,31 @@ export default function AboutMe() {
         <p>
           I am very passionate and dedicated to my work, i have plenty of
           problem solving, communication and leadership skills; and I'm very
-          good at teamwork. You can get in touch with me by filling this 📄form,
-          or you can send me an email to
+          good at teamwork. You can get in touch with me by filling this{" "}
+          <strong>
+            <a onClick={openModal}>📄form</a>
+          </strong>
+          , or you can send me an email to
           <br />
-          <strong>📧franciscopantojag98@gmail.com</strong>; also you are more
-          than welcome to follow my work on this on my github and visit my
-          linkedin profile.
+          <strong>
+            <a href={`mailto:${email}`}>📧{email}</a>
+          </strong>
+          ; also you are more than welcome to follow my work on my{" "}
+          <strong>
+            <a target="_blank" href="https://github.com/franciscopantojag">
+              github
+            </a>
+          </strong>{" "}
+          and visit my{" "}
+          <strong>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/franciscopantojaguillen/"
+            >
+              linkedin
+            </a>
+          </strong>{" "}
+          profile.
         </p>
       </div>
     </section>

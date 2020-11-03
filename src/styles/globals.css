@@ -140,6 +140,7 @@ a {
 .sectionContAbout p > strong {
   font-weight: 600;
   color: white;
+  cursor: pointer;
 }
 
 .sectionContAbout p:last-child {
