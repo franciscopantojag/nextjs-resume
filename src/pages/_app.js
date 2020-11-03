@@ -1,21 +1,35 @@
 import "../styles/globals.css";
 import Head from "next/head";
-import initReactFastclick from "react-fastclick";
+import { useEffect } from "react";
+import smoothscroll from "smoothscroll-polyfill";
+import { ContextoProvider } from "../appContext";
+import Modal from "react-modal";
+// // kick off the polyfill!
 
 function MyApp({ Component, pageProps }) {
-  initReactFastclick();
+  useEffect(() => {
+    document.addEventListener("touchstart", function () {}, false);
+    smoothscroll.polyfill();
+    Modal.setAppElement("#__next");
+    return () => {
+      document.removeEventListener("touchstart", function () {}, false);
+    };
+  }, []);
   return (
-    <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-        />
-        <meta name="author" content="Francisco Pantoja" />
-      </Head>
-      <Component {...pageProps} />
-    </>
+    <ContextoProvider>
+      <>
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          />
+          <meta name="author" content="Francisco Pantoja" />
+        </Head>
+
+        <Component {...pageProps} />
+      </>
+    </ContextoProvider>
   );
 }
 
