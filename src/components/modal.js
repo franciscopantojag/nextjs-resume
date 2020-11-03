@@ -85,7 +85,7 @@ export default function Modal({ secret }) {
       }}
     >
       <h1>
-        Thank your for your time{" "}
+        Thank you for your time{" "}
         <span aria-label="Hi there" role="img">
           ✌
         </span>
