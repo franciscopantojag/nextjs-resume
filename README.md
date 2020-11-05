@@ -1,4 +1,4 @@
-# react webResume
+# nextjs webResume
 
 A **resume** web site built with [Next.js](https://nextjs.org/).
 
