@@ -2,7 +2,7 @@ import styles from "../styles/navBar.module.css";
 import scrollIt from "../components/helpers";
 import Hamburger from "../components/hamburger";
 import { Contexto } from "../appContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export default function NavBar() {
   const { navResOpen, setNavResOpen } = useContext(Contexto);
@@ -37,11 +37,10 @@ export default function NavBar() {
       <nav className={styles.navBarRes}>
         <Hamburger />
         <ul
-          className={
-            navResOpen
-              ? `${styles.navBarResUl} ${styles.navBarResUlOpen}`
-              : styles.navBarResUl
-          }
+          id="navBarResUl"
+          className={`${styles.navBarResUl}${
+            navResOpen ? ` ${styles.navBarResUlOpen}` : ""
+          }`}
         >
           {navLinks.map((link, b) => (
             <li key={b}>

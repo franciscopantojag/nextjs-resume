@@ -62,11 +62,10 @@
   background-color: rgba(34, 34, 34, 0.95);
   z-index: 1;
   top: 0;
-  left: 0;
+  left: -10.7rem;
   display: flex;
   flex-direction: column;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
+  transition: left 0.5s ease;
 }
 .navBarResUl > li {
   width: 100%;
@@ -116,5 +115,5 @@
 }
 
 .navBarResUlOpen {
-  transform: translateX(0);
+  left: 0;
 }

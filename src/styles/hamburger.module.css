@@ -21,7 +21,7 @@
   height: 0.215rem;
   background-color: var(--text);
   border-radius: 0.43rem;
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .hamLineCross1 {
