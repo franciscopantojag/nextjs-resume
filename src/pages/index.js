@@ -9,7 +9,7 @@ import Modal from "../components/modal";
 import { Contexto } from "../appContext";
 import { useContext } from "react";
 
-export default function Home({ secret }) {
+export default function Home() {
   const { navResOpen, setNavResOpen } = useContext(Contexto);
   const closeNavRes = () => {
     if (navResOpen) {
@@ -19,14 +19,25 @@ export default function Home({ secret }) {
   return (
     <>
       <Head>
-        <meta name="og:title" content="Francisco Pantoja" />
         <title>Francisco Pantoja</title>
         <meta
           name="description"
           content="Hey, this is my personal website. You can take a look at my resume, download my CV and see how you can contact me"
         />
+        <meta property="og:title" content="Francisco Pantoja" />
+        <meta property="og:site_name" content="Francisco Pantoja" />
+        <meta property="og:url" content="https://franciscopantojag.me" />
+        <meta
+          property="og:description"
+          content="Hey, this is my personal website. You can take a look at my resume, download my CV and see how you can contact me"
+        />
+        <meta property="og:type" content="profile" />
+        <meta
+          property="og:image"
+          content="https://franciscopantojag.me/images/ogImage.jpg"
+        />
       </Head>
-      <Modal secret={secret} />
+      <Modal />
       <NavBar />
       <main onClick={closeNavRes}>
         <Banner />
@@ -43,13 +54,4 @@ export default function Home({ secret }) {
       </main>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const secret = process.env.SECRET;
-  return {
-    props: {
-      secret,
-    },
-  };
 }

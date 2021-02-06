@@ -6,8 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { timeout } from "./helpers";
 import emailjs from "emailjs-com";
+import { buttonDisabled } from "../styles/spinningWheel.module.css";
+import SpinningWheel from "../components/spinningWheel";
 
-export default function Modal({ secret }) {
+export default function Modal() {
   const { modalIsOpen, setIsOpen } = useContext(Contexto);
   const [submitMessage, setSubmitMessage] = useState("");
   const [allowSend, setAllowSend] = useState(true);
@@ -32,14 +34,19 @@ export default function Modal({ secret }) {
   };
   const submitForm = async (e) => {
     e.preventDefault();
+    const emailjsObj = {
+      serviceId: "gmail",
+      templateId: "template_aRfTvlUy",
+      userId: process.env.NEXT_PUBLIC_USER_ID,
+    };
     try {
       if (allowSend) {
         setAllowSend(() => false);
         const result = await emailjs.send(
-          "gmail",
-          "template_aRfTvlUy",
+          emailjsObj.serviceId,
+          emailjsObj.templateId,
           form,
-          secret
+          emailjsObj.userId
         );
         if (result.status == 200) {
           setSubmitMessage(() => "Gracias!");
@@ -149,8 +156,16 @@ export default function Modal({ secret }) {
         </ul>
         <div>
           <div>
-            <button type="submit" className={styles.submitButton}>
-              SUBMIT
+            <button
+              disabled={allowSend ? false : true}
+              type="submit"
+              className={
+                allowSend
+                  ? `${styles.submitButton}`
+                  : `${styles.submitButton} ${buttonDisabled}`
+              }
+            >
+              {allowSend ? "SUBMIT" : <SpinningWheel />}
             </button>
             <span>{submitMessage}</span>
           </div>

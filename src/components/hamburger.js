@@ -6,7 +6,6 @@ export default function Hamburger() {
   const { navResOpen, setNavResOpen } = useContext(Contexto);
   const toggleNavRes = () => {
     setNavResOpen((prev) => !prev);
-    console.log(navResOpen);
   };
   return (
     <section onClick={toggleNavRes} className={styles.hamburgerContainer}>

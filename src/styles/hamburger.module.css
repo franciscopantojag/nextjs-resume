@@ -1,8 +1,5 @@
 .hamburgerContainer {
   display: flex;
-
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .hamburgerContainer > ul {
