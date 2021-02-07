@@ -1,11 +1,12 @@
 import "../styles/globals.css";
-import "../styles/fontAwesome.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from "next/head";
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import { ContextoProvider } from "../appContext";
 import Modal from "react-modal";
-// // kick off the polyfill!
+config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

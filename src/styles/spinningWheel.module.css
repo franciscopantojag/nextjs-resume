@@ -98,6 +98,6 @@
 }
 
 .buttonDisabled {
-  cursor: default;
+  cursor: inherit;
   opacity: 50%;
 }

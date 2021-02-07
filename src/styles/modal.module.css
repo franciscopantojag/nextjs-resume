@@ -78,7 +78,6 @@
   width: 100%;
   max-width: 400px;
   margin: 1.3em auto 0 auto;
-  /* padding: 0 5em; */
 }
 .baseOverlay form > ul {
   margin-bottom: 0.5em;
@@ -215,8 +214,4 @@
   .submitButton:hover {
     background-color: rgb(255, 24, 57);
   }
-}
-.submitButton:active {
-  background-color: var(--light-gray);
-  color: var(--red);
 }

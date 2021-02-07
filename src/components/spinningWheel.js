@@ -19,7 +19,7 @@ export default function SpinningWheel() {
                 r="20"
                 fill="none"
                 stroke="#212121"
-                stroke-width="4"
+                strokeWidth="4"
               />
             </svg>
           </div>

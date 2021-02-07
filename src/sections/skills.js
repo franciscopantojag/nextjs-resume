@@ -2,7 +2,6 @@ import Skill from "../components/skill";
 import CircularProg from "../components/circularProg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-/*<i class="fas fa-check"></i>*/
 
 export default function Skills() {
   const mainTechSkills = [

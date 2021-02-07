@@ -26,7 +26,6 @@ export default function scrollIt(destination) {
   }
 
   scroll();
-  console.log(destination);
 }
 
 export function timeout(s) {
