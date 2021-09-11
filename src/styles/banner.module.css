@@ -1,61 +1,74 @@
 .banner {
-  min-height: calc(100vh - 3.1875rem);
+  min-height: calc(100vh - 2.5875rem);
+  align-items: flex-start;
 }
 .bannerCont {
-  margin: auto;
-  padding-bottom: 4.1875rem;
   display: flex;
   justify-content: center;
-  max-width: 1386px;
+  padding: 1rem 0;
+  width: calc(100% - 2rem);
+  margin: auto;
 }
-
-@media (max-height: 530px) {
+@media (orientation: landscape) and (min-height: 540px) {
   .bannerCont {
-    padding-bottom: 1rem;
+    padding-bottom: calc(2.5875rem + 1rem);
   }
 }
+.bannerCont h1 {
+  font-size: 5.2rem;
+  font-weight: 600;
+  padding: 0.05em 0;
+  font-family: inherit;
+}
+.bannerCont h2 {
+  font-size: 1.496rem;
+  font-weight: 400;
+  font-family: inherit;
+}
+.bannerCont h3 {
+  font-size: 0.96rem;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--text);
+}
+.bannerCont h3:nth-child(4) {
+  letter-spacing: 0.13em;
+  margin: 0.25em 0;
+  opacity: 0.7;
+}
+.bannerCont h3:nth-child(5) > a {
+  letter-spacing: 0.07em;
+  opacity: 0.7;
+}
+@media (hover: hover) {
+  .bannerCont h3:nth-child(5) > a:hover {
+    text-decoration: underline;
+    color: white;
+    opacity: 1;
+  }
+}
+
 .bannerContLeft {
-  padding-right: 0.4rem;
+  padding-right: 0.24rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.bannerContLeft > h1 {
-  font-size: 6.5rem;
-  font-weight: 600;
-  color: white;
-  padding: 0.05em 0;
-}
-.bannerContLeft > h2 {
-  font-size: 1.87rem;
-  font-weight: 400;
-}
+
 .brH2 {
   display: none;
 }
-.bannerContLeft h3 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.8;
-}
-.skills {
-  letter-spacing: 0.16rem;
-  margin: 0.5em 0;
-}
-.email {
-  letter-spacing: 0.08rem;
-}
+
 .buttons {
-  font-size: 1.2rem;
-  margin-top: 1em;
+  font-size: 0.96rem;
+  margin-top: 1.2em;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
 }
 .buttons button {
   outline: none;
-  border: none;
   font-family: inherit;
   margin-right: 0.5em;
   cursor: pointer;
@@ -65,7 +78,7 @@
 .buttons button:last-child {
   margin-right: 0;
 }
-.buttons > .firstRow {
+.buttons > div:first-child {
   display: flex;
   margin-bottom: 0.5em;
 }
@@ -73,59 +86,67 @@
   background-color: var(--red);
   color: var(--dark-black);
   font-weight: 700;
-  height: 45px;
+  height: 36px;
   border-radius: 0.2em;
   padding: 0 0.5em;
+  border: 1px var(--red) solid;
 }
-.but:active {
-  background-color: var(--dark-black);
-  color: var(--red);
-  border: 1px solid var(--red);
-}
-@media (hover: hover) {
-  .but:hover {
-    background-color: var(--dark-black);
-    color: var(--red);
-    border: 1px solid var(--red);
-  }
-}
+
 .svgBut {
   padding: 0;
   display: flex;
   background-color: var(--dark-black);
   border-radius: 100%;
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
-.svgBut > svg {
+.svgBut > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  border-radius: 100%;
 }
-.svgBut > * {
-  border-radius: 50%;
+.svgBut > a > * {
+  width: inherit;
+  height: inherit;
 }
-.svgBut:active {
+
+@media (hover: hover) {
+  .svgBut > a:hover .svgBut {
+    background-color: rgba(255, 249, 249, 0.2);
+  }
+  .svgBut > a:hover svg > path {
+    fill: rgb(255, 24, 57);
+  }
+  .but:hover {
+    background-color: rgb(255, 24, 57);
+  }
+}
+.svgBut > a:active {
   background-color: var(--red);
-  border: 1px solid var(--red);
+  border: 2px var(--red) solid;
 }
-.svgBut:active > svg > path {
+
+.svgBut > a:active svg > path {
   fill: var(--dark-black);
 }
-@media (hover: hover) {
-  .svgBut:hover {
-    background-color: var(--red);
-    border: 1px solid var(--red);
-  }
-  .svgBut:hover > svg > path {
-    fill: var(--dark-black);
-  }
+
+.but:active {
+  background-color: var(--dark-black);
+  color: var(--red);
 }
 .bannerContRight {
   width: 100%;
   display: flex;
-  max-width: 26rem;
+  max-width: 20.8rem;
   align-items: center;
-  min-width: 15rem;
+  min-width: 12rem;
   border-radius: 50%;
 }
 .bannerContRight > img {
@@ -133,22 +154,20 @@
   border-radius: 50%;
 }
 
-@media (max-width: 1425px) and (orientation: landscape) {
-  .bannerContLeft > h2 {
+/* @media (max-width: 1425px) and (orientation: landscape) {
+  .bannerCont h2 {
     font-size: 1.6082rem;
   }
-  .bannerContLeft h3 {
+  .bannerCont h3 {
     font-size: 1.032rem;
   }
-  .bannerContLeft > h1 {
+  .bannerCont h1 {
     font-size: 5.59rem;
   }
   .bannerContRight {
     max-width: 22.36rem;
   }
-  .bannerCont {
-    max-width: 1200px;
-  }
+
   .svgBut {
     width: 35px;
     height: 35px;
@@ -158,94 +177,91 @@
   }
   .buttons {
     font-size: 1rem;
-    /* margin-top: 1em; */
   }
-}
+} */
 @media (max-width: 1234px) and (orientation: landscape) {
-  .bannerContLeft > h2 {
+  .bannerCont {
+    max-width: 1040px;
+  }
+  .bannerCont h2 {
     font-size: 1.383052rem;
   }
-  .bannerContLeft h3 {
+  .bannerCont h3 {
     font-size: 1rem;
   }
-  .bannerContLeft > h1 {
+  .bannerCont h1 {
     font-size: 4.8074rem;
   }
   .bannerContRight {
     max-width: 19.2296rem;
   }
-  .bannerCont {
-    max-width: 1040px;
-  }
 }
 @media (max-width: 1070px) and (orientation: landscape) {
-  .bannerContLeft > h2 {
+  .bannerCont {
+    max-width: 880px;
+  }
+  .bannerCont h2 {
     font-size: 1.18942472rem;
   }
-  .bannerContLeft > h1 {
+  .bannerCont h1 {
     font-size: 4.134364rem;
   }
   .bannerContRight {
     max-width: 16.537456rem;
   }
-  .bannerCont {
-    max-width: 880px;
-  }
 }
 @media (max-width: 930px) and (orientation: landscape) {
-  .bannerContLeft > h1 {
+  .bannerCont {
+    max-width: 770px;
+  }
+  .bannerCont h1 {
     font-size: 3.55555304rem;
   }
   .bannerContRight {
     max-width: 14.22221216rem;
   }
-  .bannerCont {
-    max-width: 770px;
-  }
 }
 @media (max-width: 820px) and (orientation: landscape) {
-  .bannerContLeft > h1 {
+  .bannerCont {
+    max-width: 680px;
+  }
+  .bannerCont h1 {
     font-size: 3.0577756144rem;
   }
   .bannerContRight {
     max-width: 13rem;
     min-width: auto;
   }
-  .bannerCont {
-    max-width: 680px;
-  }
 }
 @media (max-width: 715px) and (orientation: landscape) {
-  .bannerContLeft > h1 {
+  .bannerCont {
+    max-width: 600px;
+  }
+  .bannerCont h1 {
     font-size: 2.629687028384rem;
   }
   .bannerContRight {
     max-width: 12.2311024576rem;
   }
-  .bannerCont {
-    max-width: 600px;
-  }
-  .banner {
-    min-width: 593px;
-  }
 }
-@media (max-width: 638px) and (orientation: landscape) {
+@media (max-width: 644px) and (orientation: landscape) {
+  .bannerCont {
+    max-width: 570px;
+  }
   .bannerContRight {
     max-width: 10.518748113536rem;
   }
 }
 @media (orientation: portrait) {
   .banner {
-    min-width: auto;
-    min-height: 100vh;
+    min-height: 95vh;
   }
   .bannerCont {
-    max-width: 100%;
-    padding-bottom: 1rem;
     display: flex;
     flex-direction: column-reverse;
+    padding: 1.2rem 0;
   }
-  .buttons > .firstRow {
+  .buttons > div:first-child {
     display: flex;
     justify-content: center;
   }
@@ -256,7 +272,6 @@
     text-align: center;
   }
   .bannerContRight {
-    max-width: 100%;
     align-self: center;
     width: auto;
     width: 15rem;
@@ -264,20 +279,19 @@
   .buttons {
     align-self: center;
     font-size: 1rem;
-    /* margin-top: 1em; */
   }
-  .bannerContLeft > h1 {
+  .bannerCont h1 {
     font-size: 3.5rem;
     padding: 0.1em 0;
   }
-  .bannerContLeft > h2:first-child {
+  .bannerCont h2:first-child {
     font-size: 1rem;
     padding-top: 0.1em;
   }
-  .bannerContLeft > h2:nth-child(3) {
+  .bannerCont h2:nth-child(3) {
     font-size: 1.3rem;
   }
-  .bannerContLeft h3 {
+  .bannerCont h3 {
     font-size: 1rem;
   }
   .svgBut {
@@ -289,5 +303,19 @@
   }
   .brH2 {
     display: inline;
+  }
+  .bannerCont h3:nth-child(4) {
+    margin: 0.5em 0;
+  }
+}
+@media (orientation: landscape) {
+  .bannerCont h1 {
+    position: relative;
+    left: -0.05em;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  .banner {
+    min-height: calc(100vh - 3.1875rem);
   }
 }

@@ -8,9 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "@svgr/webpack": "^5.4.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@ramonak/react-progress-bar": "^1.0.3",
+    "emailjs-com": "^2.6.3",
     "next": "9.5.5",
     "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "react-circular-progressbar": "^2.0.3",
+    "react-dom": "16.14.0",
+    "react-modal": "^3.11.2",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

@@ -1,0 +1,217 @@
+.baseOverlay {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: rgba(21, 21, 21, 0.5);
+  font-size: 1rem;
+}
+
+.afterOpenOverlay {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.beforeCloseOverlay {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.baseContent {
+  opacity: 1;
+  transform: translateY(calc(50vh + 50%));
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  outline: none;
+  width: 90%;
+  max-width: 560px;
+  max-height: 500px;
+  background-color: rgba(34, 34, 34, 0.9);
+  margin: auto;
+  padding: 1.2em;
+  padding-top: 1.75em;
+  border: 1px white solid;
+  border-radius: 4px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow: auto;
+}
+@media (max-width: 900px) {
+  .baseContent {
+    padding-top: 1.8em;
+  }
+}
+
+.afterOpenContent {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.beforeCloseContent {
+  opacity: 0;
+  transform: translateY(calc(50vh + 50%));
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.baseOverlay h1 {
+  font-size: 2.16rem;
+  line-height: normal;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+.baseOverlay h2 {
+  font-size: 1.12rem;
+  line-height: normal;
+  text-align: center;
+  color: var(--text);
+  opacity: 0.9;
+  font-weight: 600;
+}
+.baseOverlay form {
+  width: 100%;
+  max-width: 400px;
+  margin: 1.3em auto 0 auto;
+}
+.baseOverlay form > ul {
+  margin-bottom: 0.5em;
+}
+
+.baseOverlay form > ul:nth-child(4) {
+  margin-bottom: 0;
+}
+.baseOverlay form > ul > li {
+  display: flex;
+  align-items: center;
+}
+.baseOverlay form > ul > li > label {
+  margin-bottom: 0.3em;
+  font-size: 1.04rem;
+  color: white;
+}
+.baseOverlay li > input {
+  font-size: inherit;
+  height: 2em;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 4px;
+}
+.baseOverlay li > label,
+.baseOverlay li > input,
+.baseOverlay li > textarea {
+  width: 100%;
+  outline: none;
+}
+
+.baseOverlay textarea {
+  font-size: inherit;
+  height: 4.5em;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.baseOverlay li > input,
+.baseOverlay li > textarea {
+  font-weight: 600;
+  padding: 0.3em;
+  border: none;
+}
+.baseOverlay li > input:focus,
+.baseOverlay li > textarea:focus {
+  outline: var(--red) solid 1px;
+  border-radius: 0;
+}
+.baseOverlay form > div {
+  font-size: 1.12rem;
+  display: flex;
+  margin-top: 1.2em;
+}
+.baseOverlay form > div > div {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.baseOverlay form > div span {
+  font-weight: 600;
+  position: absolute;
+  font-size: 1.12rem;
+  color: var(--red);
+  left: calc(100% + 1em);
+  top: 0;
+}
+
+.cross {
+  font-size: 1.12rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--red);
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 4px;
+  display: flex;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .cross:hover {
+    background-color: rgb(255, 24, 57);
+  }
+}
+.cross > svg {
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .baseOverlay form > div {
+    font-size: 1.2rem;
+  }
+  .baseOverlay form > ul > li > label {
+    font-size: 1.1rem;
+  }
+  .baseOverlay h1 {
+    font-size: 2rem;
+  }
+  .baseOverlay h2 {
+    font-size: 1.2rem;
+  }
+  .baseOverlay {
+    font-size: 1rem;
+  }
+  .cross {
+    font-size: 1.2rem;
+  }
+  .baseContent {
+    max-height: 570px;
+  }
+}
+
+.submitButton {
+  background-color: var(--red);
+  outline: none;
+  border-radius: 0.2em;
+  width: 100%;
+  margin: auto;
+  padding: 0.2em 0.8em;
+  cursor: pointer;
+  font-size: inherit;
+  border: 1px solid var(--red);
+  color: var(--light-gray);
+  font-weight: 600;
+  font-family: inherit;
+}
+
+@media (hover: hover) {
+  .submitButton:hover {
+    background-color: rgb(255, 24, 57);
+  }
+}
