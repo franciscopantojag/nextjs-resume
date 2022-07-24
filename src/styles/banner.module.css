@@ -254,7 +254,7 @@
 }
 @media (orientation: portrait) {
   .banner {
-    min-height: 95vh;
+    min-height: 90vh;
   }
   .bannerCont {
     display: flex;
