@@ -274,7 +274,7 @@
   .bannerContRight {
     align-self: center;
     width: auto;
-    width: 15rem;
+    width: 14.4rem;
   }
   .buttons {
     align-self: center;
@@ -282,11 +282,12 @@
   }
   .bannerCont h1 {
     font-size: 3.5rem;
-    padding: 0.1em 0;
+    padding: 0.4em 0;
+    line-height: 1.1;
   }
   .bannerCont h2:first-child {
     font-size: 1rem;
-    padding-top: 0.1em;
+    padding-top: 0.2em;
   }
   .bannerCont h2:nth-child(3) {
     font-size: 1.3rem;
