@@ -25,11 +25,11 @@ export default function Banner() {
           </h2>
           <h1>{name}</h1>
           <h2>
-            Web Developer |
+            Software Engineer <span className={styles.dash}>-</span>
             <span className={styles.brH2}>
               <br />
             </span>{' '}
-            Bachelor of Engineering
+            Web Developer
           </h2>
           <h3>HTML / CSS / JS / React</h3>
           <h3>

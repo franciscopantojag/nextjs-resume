@@ -305,6 +305,9 @@
   .brH2 {
     display: inline;
   }
+  .dash{
+    display: none;
+  }
   .bannerCont h3:nth-child(4) {
     margin: 0.5em 0;
   }
